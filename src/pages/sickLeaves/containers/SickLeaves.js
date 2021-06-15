@@ -117,7 +117,6 @@ const SickLeaves = () => {
         setTotalRows(totalRows);
       }
     } catch (error) {
-      console.log('error', error);
       setRows([]);
     }
   }

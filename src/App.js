@@ -58,7 +58,6 @@ const App = () => {
     </React.Fragment>
   ) : <Home/>;
 
-  console.log('plm');
   return (
     <AppContainer>
       <BrowserRouter>

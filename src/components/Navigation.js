@@ -149,9 +149,6 @@ const Navigation = ({ children }) => {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <img className={classes.appLogo} src={Logo} alt="MyMedData" />
-          {/*<Typography variant="h6" noWrap>*/}
-          {/*  Medical App*/}
-          {/*</Typography>*/}
           <Typography variant="h6" noWrap className={classes.contact}>
             <PhoneIphoneIcon style={{ marginRight: '5px' }} />
             Programari:

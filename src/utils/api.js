@@ -31,8 +31,9 @@ export const sendRequest = async (method, endpoint, data) => {
         resolve(response.data);
       })
       .catch((error) => {
-        console.log('error', error);
-        reject(error.response.data ? error.response.data.message : 'Request error');
+        const { response: { data } = {} } = error;
+
+        reject(data ? data.message : 'Ceva nu a functionat');
       });
   });
 };

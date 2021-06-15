@@ -316,7 +316,6 @@ const Patients = () => {
 
       }
     } catch (error) {
-      console.log('error', error);
       setRows([]);
     }
   }

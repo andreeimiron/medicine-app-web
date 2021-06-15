@@ -102,7 +102,6 @@ const Consultations = () => {
       setRows(updatedRows);
       setTotalRows(totalRows);
     } catch (error) {
-      console.log('error', error);
       setRows([]);
     }
   }

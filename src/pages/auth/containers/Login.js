@@ -42,10 +42,7 @@ const useStyles = makeStyles(() => ({
   appLogo: {
     marginBottom: '100px',
     width: '400px',
-    height: 'auto',
-    // dispaly: 'flex',
-    // alignItems: 'center',
-    // color: '#3f51b5',
+    height: 'auto'
   }
 }));
 

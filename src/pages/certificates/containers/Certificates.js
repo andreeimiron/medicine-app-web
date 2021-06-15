@@ -155,7 +155,6 @@ const Certificates = () => {
         setTotalRows(totalRows);
       }
     } catch (error) {
-      console.log('error', error);
       setRows([]);
     }
   }
