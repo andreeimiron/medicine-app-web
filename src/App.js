@@ -49,7 +49,7 @@ const App = () => {
 
   useEffect(() => {
     setIsDoctor(loggedUser && loggedUser.role === 'medic');
-  }, [loggedUser]);
+  }, [loggedUser, isDoctor]);
 
   const HomeComponent = () => isDoctor ? (
     <React.Fragment>
