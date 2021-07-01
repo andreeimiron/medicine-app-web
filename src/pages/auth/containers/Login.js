@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -69,6 +69,13 @@ const Login = () => {
   const [disabled, setDisabled] = useState(false);
 
   const [loginData, setLoginData] = useState(defaultData);
+  const loggedUser = JSON.parse(localStorage.getItem('user'));
+
+  useEffect(() => {
+    if (loggedUser) {
+      history.push('/');
+    }
+  }, loggedUser)
 
   const schema = {
     email: Joi.string().required().email({ minDomainAtoms: 2 }).label(loginData.email.label),

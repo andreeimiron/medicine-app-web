@@ -44,25 +44,12 @@ const convertedComponent = (Component) => (
 
 
 const App = () => {
-  const [isDoctor, setIsDoctor] = useState(false);
-  const loggedUser = JSON.parse(localStorage.getItem('user')) || {};
-
-  useEffect(() => {
-    setIsDoctor(loggedUser && loggedUser.role === 'medic');
-  }, [loggedUser, isDoctor]);
-
-  const HomeComponent = () => isDoctor ? (
-    <React.Fragment>
-      <Consultations/>
-      <Home/>
-    </React.Fragment>
-  ) : <Home/>;
 
   return (
     <AppContainer>
       <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={() => convertedComponent(HomeComponent)} />
+            <Route exact path="/" component={() => convertedComponent(Home)} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/certificates" component={() => convertedComponent(Certificates)} />
             <Route exact path="/vaccines" component={() => convertedComponent(Vaccines)} />

@@ -5,6 +5,7 @@ import PostCard from "../components/PostCard";
 import Post1 from '../../../assets/images/post1.jpeg';
 import Post2 from '../../../assets/images/post2.jpeg';
 import Post3 from '../../../assets/images/post3.png';
+import Consultations from "../../consultations/containers/Consultations";
 
 const posts = [
   {
@@ -153,9 +154,12 @@ const useStyles = makeStyles(() => ({
 
 const Home = () => {
   const classes = useStyles();
+  const loggedUser = JSON.parse(localStorage.getItem('user')) || {};
+  const isDoctor = loggedUser.role === 'medic';
 
   return (
     <div>
+      {isDoctor && <Consultations/>}
       <Typography variant="h5" style={{ margin: '45px 0'}} gutterBottom>
         Informatii de interes general
       </Typography>
